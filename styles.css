@@ -1,0 +1,32 @@
+
+#w3-container {
+  padding: 128px 16px;
+}
+
+#w3-container h1 {
+  text-align: center;
+}
+
+#w3-container p {
+  text-align: center;
+  font-size: large;
+}
+
+.w3-row-padding {
+  margin-top: 64px;
+}
+
+.w3-quarter {
+  width: 24%;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.w3-quarter i {
+  margin-bottom: 16px;
+  font-size: 3rem;
+}
+
+.w3-large {
+  font-size: 1.25rem;
+}

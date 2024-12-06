@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery</title>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.bg-img {
+  background-image: url("wallpaper1.JPG");
+  min-height: 380px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+body {
+  background: white;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: Arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+
+.contact-container {
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 5px;
+  background-color: black;
+  padding: 20px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="bg-img">
+  <div class="topnav">
+    <a href="homepage.html">Home</a>
+    <a href="me.html">Biodata</a>
+    <a href="edu.html">My Education</a>
+    <a href="fam.html">My Family</a>
+    <a href="internship1.html">My Internship Experience</a>
+    <a href="gallery.html">Gallery</a>
+	<a href="skincare.html">Skincare</a>
+	<a href="food.html">Food</a>
+  </div>
+</div>
+
+<style>
+.container {
+  display: flex;
+  align-items: center; 
+  gap: 20px; 
+  margin-top: 20px;
+  marfin-bottom:40px;
+}
+
+.container img {
+  max-width: 400px;
+  height: auto;
+}
+
+.container .text {
+  flex: 1; 
+}
+</style>
+
+<div class="container">
+  <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+  
+  <div class="text">
+	<h1 class="large-font" style="color:MediumSeaGreen;">How to view the gallery?</h1>
+      
+    <p>
+      Click on different parts of the image to explore:
+      <ul>
+        <li><b>Computer:</b> View the internship gallery.</li>
+        <li><b>Phone:</b> Explore the gallery of friends.</li>
+        <li><b>Cup of Coffee:</b> Check out the cats gallery.</li>
+      </ul>
+    </p>
+  </div>
+</div>
+
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="galleryintern.html">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="galleryfriends.html">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="gallerycats.html">
+</map>
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+.column {
+  -ms-flex: 50%; 
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+<div class="header" id="myHeader">
+  <h1>Image Grid</h1>
+  <p>Click on the buttons to change the grid view.</p>
+  <button class="btn" onclick="one()">1</button>
+  <button class="btn active" onclick="two()">2</button>
+  <button class="btn" onclick="four()">4</button>
+</div>
+
+
+<div class="row"> 
+  <div class="column">
+    <img src="friend1.JPG" style="width:100%">
+    <img src="friend2.JPG" style="width:100%">
+    <img src="friend3.PNG" style="width:100%">
+    <img src="friend4.JPG" style="width:100%">
+    <img src="friend5.JPG" style="width:100%">
+    <img src="friend6.JPG" style="width:100%">
+    <img src="friend7.JPG" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="friend8.JPG" style="width:100%">
+    <img src="friend9.JPG" style="width:100%">
+    <img src="friend10.JPG" style="width:100%">
+    <img src="friend11.JPG" style="width:100%">
+    <img src="friend12.JPG" style="width:100%">
+    <img src="friend13.JPG" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="friend14.JPG" style="width:100%">
+    <img src="friend15.JPG" style="width:100%">
+    <img src="friend16.JPG" style="width:100%">
+    <img src="friend17.JPG" style="width:100%">
+    <img src="friend18.JPG" style="width:100%">
+    <img src="friend19.JPG" style="width:100%">
+    <img src="friend20.JPG" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="friend21.JPG" style="width:100%">
+    <img src="friend22.JPG" style="width:100%">
+    <img src="friend23.JPG" style="width:100%">
+    <img src="atin6.jpg" style="width:100%">
+    <img src="ajim.jpg" style="width:100%">
+    <img src="mak.jpg" style="width:100%">
+  </div>
+</div>
+
+<script>
+var elements = document.getElementsByClassName("column");
+
+var i;
+
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%"; 
+    elements[i].style.flex = "50%";
+  }
+}
+
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  
+    elements[i].style.flex = "25%";
+  }
+}
+
+
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+</body>
+</html>
